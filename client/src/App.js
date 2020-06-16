@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 import SensorModal from "./components/SensorModal";
-import { VerticalSpacer } from "./components/StyledComponents";
+import { VerticalSpacer, Header } from "./components/StyledComponents";
+
+import "./App.css";
 
 function App() {
   const serverSocket = new WebSocket("ws://localhost:5000/");
@@ -13,6 +16,8 @@ function App() {
   const [pressure, setPressure] = useState({});
   const [temperature, setTemperature] = useState({});
   const [wind, setWind] = useState({});
+
+  const [showActive, setShowActive] = useState(false);
 
   useEffect(() => {
     serverSocket.onmessage = (event) => {
@@ -78,7 +83,18 @@ function App() {
 
   return (
     <div className="App">
-      <VerticalSpacer size={3} />
+      <Row>
+        <Header>
+          <h1>Sensor model management</h1>
+          <Button
+            variant="outline-secondary"
+            onClick={() => setShowActive(!showActive)}
+          >
+            {showActive ? "Show all" : "Show connected"}
+          </Button>
+        </Header>
+      </Row>
+      <VerticalSpacer size={2} />
       <Row>
         <Col
           lg={{ span: 3, offset: 1 }}
@@ -94,6 +110,7 @@ function App() {
               handleConnection={handleConnection}
               value={humidity.value}
               unit={humidity.unit}
+              show={(showActive && humidity.connected) || !showActive}
             ></SensorModal>
           )}
         </Col>
@@ -111,6 +128,7 @@ function App() {
               handleConnection={handleConnection}
               value={pressure.value}
               unit={pressure.unit}
+              show={(showActive && pressure.connected) || !showActive}
             ></SensorModal>
           )}
         </Col>
@@ -128,6 +146,7 @@ function App() {
               handleConnection={handleConnection}
               value={wind.value}
               unit={wind.unit}
+              show={(showActive && wind.connected) || !showActive}
             ></SensorModal>
           )}
         </Col>
@@ -148,6 +167,7 @@ function App() {
               handleConnection={handleConnection}
               value={temperature.value}
               unit={temperature.unit}
+              show={(showActive && temperature.connected) || !showActive}
             ></SensorModal>
           )}
         </Col>
@@ -165,6 +185,7 @@ function App() {
               handleConnection={handleConnection}
               value={pm25.value}
               unit={pm25.unit}
+              show={(showActive && pm25.connected) || !showActive}
             ></SensorModal>
           )}
         </Col>
@@ -182,6 +203,7 @@ function App() {
               handleConnection={handleConnection}
               value={pm10.value}
               unit={pm10.unit}
+              show={(showActive && pm10.connected) || !showActive}
             ></SensorModal>
           )}
         </Col>
