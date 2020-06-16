@@ -87,6 +87,7 @@ function App() {
         <Header>
           <h1>Sensor model management</h1>
           <Button
+            id="showActive-button"
             variant="outline-secondary"
             onClick={() => setShowActive(!showActive)}
           >

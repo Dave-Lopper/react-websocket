@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div
+  className="App"
+>
+  <Row
+    noGutters={false}
+  >
+    <styled.header>
+      <h1>
+        Sensor model management
+      </h1>
+      <Button
+        active={false}
+        disabled={false}
+        id="showActive-button"
+        onClick={[Function]}
+        type="button"
+        variant="outline-secondary"
+      >
+        Show connected
+      </Button>
+    </styled.header>
+  </Row>
+  <styled.div
+    size={2}
+  />
+  <Row
+    noGutters={false}
+  >
+    <Col
+      lg={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      md={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      sm={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      xs={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+    />
+    <Col
+      lg={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+      md={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      sm={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      xs={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+    >
+      <SensorModal
+        handleConnection={[Function]}
+        show={true}
+        title="Pressure"
+      />
+    </Col>
+    <Col
+      lg={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+      md={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      sm={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      xs={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+    >
+      <SensorModal
+        handleConnection={[Function]}
+        show={true}
+        title="Wind"
+      />
+    </Col>
+  </Row>
+  <styled.div
+    size={4}
+  />
+  <Row
+    noGutters={false}
+  >
+    <Col
+      lg={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      md={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      sm={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      xs={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+    >
+      <SensorModal
+        handleConnection={[Function]}
+        show={true}
+        title="Temperature"
+      />
+    </Col>
+    <Col
+      lg={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+      md={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      sm={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      xs={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+    >
+      <SensorModal
+        handleConnection={[Function]}
+        show={true}
+        title="PM2.5"
+      />
+    </Col>
+    <Col
+      lg={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+      md={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      sm={
+        Object {
+          "offset": 1,
+          "span": 3,
+        }
+      }
+      xs={
+        Object {
+          "offset": 0,
+          "span": 3,
+        }
+      }
+    >
+      <SensorModal
+        handleConnection={[Function]}
+        show={true}
+        title="PM10"
+      />
+    </Col>
+  </Row>
+</div>
+`;
